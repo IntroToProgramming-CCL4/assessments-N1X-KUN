@@ -1,0 +1,6 @@
+name = input("name: ")
+print (name)
+
+print ('''
+^Fun Fact: Thats your name...
+''')
