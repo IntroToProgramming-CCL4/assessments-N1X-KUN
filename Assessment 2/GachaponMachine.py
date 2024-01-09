@@ -146,7 +146,7 @@ def display_receipt(wallet, total_money_inserted, obtained_characters, roll_coun
     print(f"Time: {time.strftime('%H:%M:%S')}")                 #prints the current hour - minutes - seconds
     print(f"\nNumber of times user rolled: {len(roll_counts)}") #displays the total amount of times the user has rolled
 
-    roll_types = {1: "Basic", 2: "Rare", 3: "Epic", 4: "Legendary", 5: "Special"} #this simply tells the system the numeric value for each rarity rolls
+    roll_types = {1: "Basic", 2: "Rare", 3: "Epic", 4: "Legendary", 5: "Special"} #this is a dictionary that simply tells the system the numeric value for each rarity rolls
 
     for roll, count in sorted(roll_counts.items()):             #checks the roll type and number of times the user rolled for that particular rarity
         cost = {1: 9 if occupation == 'student' else 10, 2: 19 if occupation == 'student' else 20, 3: 49 if occupation == 'student' else 50, 4: 69 if occupation == 'student' else 70, 5: 99 if occupation == 'student' else 100}[roll]
