@@ -245,7 +245,7 @@ def run():                                 #the main control loop of the entire 
                 print("Sorry, we do not accept non-integer inputs. Please insert proper currency.") 
                 continue                          #again just continues and does not go back 
             if wallet < cost:                     #checks if the wallet is still not enough to pay for the cost of a roll
-                print(f"Insufficient funds. Please insert {cost - wallet}Dhs or more.")
+                print(f"\nInsufficient funds. Please insert {cost - wallet}Dhs or more.")
 
         roll_counts.setdefault(choice, 0)         #acts as a counter and starts of 0 if the user has JUST chosen that roll
         roll_counts[choice] += 1                  #it then adds +1 for everytime the user rolls that same roll again, basically a counter
@@ -276,7 +276,7 @@ def run():                                 #the main control loop of the entire 
                         print("Sorry, we do not accept non-integer inputs. Please insert proper currency.")
                         continue                       #skips the rest of it and starts over again if there are errors
                     if wallet < cost:
-                        print(f"Insufficient funds. Please insert {cost - wallet}Dhs or more.")
+                        print(f"\nInsufficient funds. Please insert {cost - wallet}Dhs or more.")
                 roll_counts.setdefault(choice, 0)
                 roll_counts[choice] += 1
                 wallet, total_money_inserted, obtained_characters, user_name = roll_gacha(cost, "Special" if choice == 5 else "Basic" if choice == 1 else "Rare" if choice == 2 else "Epic" if choice == 3 else "Legendary", wallet, total_money_inserted, obtained_characters, user_name)
